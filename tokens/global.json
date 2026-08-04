@@ -1,0 +1,43 @@
+{
+  "color": {
+    "brand": {
+      "primary": { "value": "#ef2da8", "type": "color" },
+      "primary-dark": { "value": "#c21f88", "type": "color" },
+      "ink": { "value": "#0d0814", "type": "color" }
+    },
+    "grey": {
+      "50": { "value": "#f5f3f7", "type": "color" },
+      "200": { "value": "#2a1f33", "type": "color" },
+      "500": { "value": "#8b829a", "type": "color" },
+      "800": { "value": "#170d1f", "type": "color" },
+      "900": { "value": "#0d0814", "type": "color" }
+    },
+    "success": { "500": { "value": "#34d399", "type": "color" } },
+    "warning": { "500": { "value": "#eab308", "type": "color" } },
+    "danger": { "500": { "value": "#f87171", "type": "color" } },
+    "white": { "value": "#ffffff", "type": "color" },
+    "phase": {
+      "concept": { "value": "#a78bfa", "type": "color" },
+      "world-bible": { "value": "#60a5fa", "type": "color" },
+      "character-vault": { "value": "#34d399", "type": "color" },
+      "synopsis": { "value": "#eab308", "type": "color" },
+      "treatment": { "value": "#f472b6", "type": "color" },
+      "outline": { "value": "#fb923c", "type": "color" },
+      "first-draft": { "value": "#22d3ee", "type": "color" },
+      "revision": { "value": "#a78bfa", "type": "color" },
+      "final-draft": { "value": "#34d399", "type": "color" }
+    }
+  },
+  "space": {
+    "2": { "value": "8", "type": "spacing" },
+    "4": { "value": "16", "type": "spacing" },
+    "6": { "value": "24", "type": "spacing" },
+    "8": { "value": "32", "type": "spacing" }
+  },
+  "radius": {
+    "sm": { "value": "4", "type": "borderRadius" },
+    "md": { "value": "8", "type": "borderRadius" },
+    "lg": { "value": "16", "type": "borderRadius" },
+    "full": { "value": "999", "type": "borderRadius" }
+  }
+}

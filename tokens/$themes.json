@@ -1,0 +1,11 @@
+[
+  {
+    "id": "scriptoplay-default",
+    "name": "Default",
+    "selectedTokenSets": {
+      "global": "source",
+      "semantic": "enabled",
+      "component": "enabled"
+    }
+  }
+]

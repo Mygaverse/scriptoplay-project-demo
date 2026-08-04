@@ -1,0 +1,49 @@
+{
+  "button": {
+    "primary": {
+      "bg": { "value": "{action.primary}", "type": "color" },
+      "bg-hover": { "value": "{action.primary-hover}", "type": "color" },
+      "fg": { "value": "{color.white}", "type": "color" },
+      "radius": { "value": "{radius.md}", "type": "borderRadius" }
+    }
+  },
+  "badge": {
+    "success": {
+      "bg": { "value": "{feedback.success}", "type": "color" },
+      "fg": { "value": "{text.inverse}", "type": "color" }
+    },
+    "warning": {
+      "bg": { "value": "{feedback.warning}", "type": "color" },
+      "fg": { "value": "{text.inverse}", "type": "color" }
+    },
+    "danger": {
+      "bg": { "value": "{feedback.danger}", "type": "color" },
+      "fg": { "value": "{text.inverse}", "type": "color" }
+    }
+  },
+  "card": {
+    "bg": { "value": "{surface.default}", "type": "color" },
+    "border": { "value": "{surface.border}", "type": "color" },
+    "radius": { "value": "{radius.lg}", "type": "borderRadius" }
+  },
+  "phaseTag": {
+    "concept": { "bg": { "value": "{color.phase.concept}", "type": "color" }, "fg": { "value": "{text.inverse}", "type": "color" } },
+    "world-bible": { "bg": { "value": "{color.phase.world-bible}", "type": "color" }, "fg": { "value": "{text.inverse}", "type": "color" } },
+    "character-vault": { "bg": { "value": "{color.phase.character-vault}", "type": "color" }, "fg": { "value": "{text.inverse}", "type": "color" } },
+    "synopsis": { "bg": { "value": "{color.phase.synopsis}", "type": "color" }, "fg": { "value": "{text.inverse}", "type": "color" } },
+    "treatment": { "bg": { "value": "{color.phase.treatment}", "type": "color" }, "fg": { "value": "{text.inverse}", "type": "color" } },
+    "outline": { "bg": { "value": "{color.phase.outline}", "type": "color" }, "fg": { "value": "{text.inverse}", "type": "color" } },
+    "first-draft": { "bg": { "value": "{color.phase.first-draft}", "type": "color" }, "fg": { "value": "{text.inverse}", "type": "color" } },
+    "revision": { "bg": { "value": "{color.phase.revision}", "type": "color" }, "fg": { "value": "{text.inverse}", "type": "color" } },
+    "final-draft": { "bg": { "value": "{color.phase.final-draft}", "type": "color" }, "fg": { "value": "{text.inverse}", "type": "color" } }
+  },
+  "stateBadge": {
+    "prompting": { "bg": { "value": "{action.primary}", "type": "color" }, "fg": { "value": "{color.white}", "type": "color" } },
+    "processing": { "bg": { "value": "{feedback.warning}", "type": "color" }, "fg": { "value": "{text.inverse}", "type": "color" } },
+    "previewing": { "bg": { "value": "{surface.border}", "type": "color" }, "fg": { "value": "{text.primary}", "type": "color" } },
+    "comparing": { "bg": { "value": "{color.phase.concept}", "type": "color" }, "fg": { "value": "{text.inverse}", "type": "color" } },
+    "regenerating": { "bg": { "value": "{color.phase.world-bible}", "type": "color" }, "fg": { "value": "{text.inverse}", "type": "color" } },
+    "approving": { "bg": { "value": "{feedback.success}", "type": "color" }, "fg": { "value": "{text.inverse}", "type": "color" } },
+    "error-recovery": { "bg": { "value": "{feedback.danger}", "type": "color" }, "fg": { "value": "{color.white}", "type": "color" } }
+  }
+}

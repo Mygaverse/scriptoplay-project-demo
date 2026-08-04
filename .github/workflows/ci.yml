@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build design tokens (Style Dictionary)
+        run: npm run tokens:build
+
+      - name: Fail if committed token output is stale
+        run: |
+          if ! git diff --quiet -- src/styles/tokens.css src/tokens/tokens.js; then
+            echo "::error::src/styles/tokens.css / src/tokens/tokens.js are out of date."
+            echo "Run 'npm run tokens:build' and commit the result."
+            git diff -- src/styles/tokens.css src/tokens/tokens.js
+            exit 1
+          fi
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Type check
+        run: npx tsc --noEmit
+
+      - name: Build app
+        run: npm run build
+
+      - name: Build Storybook
+        run: npm run build-storybook
+        env:
+          CI: true
+
+      - name: Upload Storybook artifact
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: storybook-static
+
+      - name: Deploy Storybook to GitHub Pages
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        id: deployment
+        uses: actions/deploy-pages@v4

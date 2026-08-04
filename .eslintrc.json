@@ -1,0 +1,4 @@
+{
+  "extends": "next/core-web-vitals",
+  "ignorePatterns": ["storybook-static/", ".next/", "src/tokens/tokens.js"]
+}
