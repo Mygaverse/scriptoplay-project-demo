@@ -5,9 +5,24 @@ import { register } from '@tokens-studio/sd-transforms';
 // Style Dictionary's pipeline: unit conversion, alias resolution, etc.
 register(StyleDictionary);
 
+// Token Studio's single-file sync (free tier - multi-file sync is Pro-only)
+// exports every set nested under its own top-level key, e.g.
+// { "global": {...}, "semantic": {...}, "component": {...}, "$metadata": {...} }.
+// Token references like "{color.brand.primary}" are written relative to the
+// merged tree, not "{global.color.brand.primary}", so unwrap the set-name
+// nesting before the tokens-studio preprocessor resolves aliases.
+StyleDictionary.registerPreprocessor({
+  name: 'unwrap-token-studio-sets',
+  preprocessor: (dictionary) => ({
+    ...dictionary.global,
+    ...dictionary.semantic,
+    ...dictionary.component,
+  }),
+});
+
 const config = {
-  source: ['tokens/global.json', 'tokens/semantic.json', 'tokens/component.json'],
-  preprocessors: ['tokens-studio'],
+  source: ['tokens.json'],
+  preprocessors: ['unwrap-token-studio-sets', 'tokens-studio'],
   platforms: {
     css: {
       // 'tokens-studio' group ends with name/camel; append name/kebab so CSS
