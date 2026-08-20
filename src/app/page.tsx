@@ -2,28 +2,28 @@ import { Button } from '@/components/Button';
 import { Badge } from '@/components/Badge';
 import { Card } from '@/components/Card';
 import { PhaseTag, type Phase } from '@/components/PhaseTag';
-import { StateBadge, type SpecState } from '@/components/StateBadge';
+import { StateBadge, type ClipStatus } from '@/components/StateBadge';
 
 const PHASES: Phase[] = [
   'concept',
-  'world-bible',
-  'character-vault',
+  'world_bible',
+  'character_vault',
   'synopsis',
   'treatment',
   'outline',
-  'first-draft',
+  'first_draft',
   'revision',
-  'final-draft',
+  'final_draft',
 ];
 
-const STATES: SpecState[] = [
-  'prompting',
-  'processing',
-  'previewing',
-  'comparing',
-  'regenerating',
-  'approving',
-  'error-recovery',
+const STATES: ClipStatus[] = [
+  'idle',
+  'generating',
+  'polling',
+  'pending_qa',
+  'approved',
+  'killed',
+  'failed',
 ];
 
 export default function Home() {
@@ -64,7 +64,7 @@ export default function Home() {
           </div>
           <div>
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-text-secondary">
-              Component spec states
+              AI clip-generation states
             </p>
             <div className="flex flex-wrap gap-2">
               {STATES.map((state) => (

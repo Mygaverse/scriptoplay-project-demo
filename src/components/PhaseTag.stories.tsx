@@ -11,14 +11,14 @@ type Story = StoryObj<typeof PhaseTag>;
 
 const PHASES: Phase[] = [
   'concept',
-  'world-bible',
-  'character-vault',
+  'world_bible',
+  'character_vault',
   'synopsis',
   'treatment',
   'outline',
-  'first-draft',
+  'first_draft',
   'revision',
-  'final-draft',
+  'final_draft',
 ];
 
 export const AllPhases: Story = {
@@ -32,4 +32,4 @@ export const AllPhases: Story = {
 };
 
 export const Concept: Story = { args: { phase: 'concept' } };
-export const FinalDraft: Story = { args: { phase: 'final-draft' } };
+export const FinalDraft: Story = { args: { phase: 'final_draft' } };

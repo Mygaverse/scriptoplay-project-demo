@@ -1,15 +1,21 @@
 import clsx from 'clsx';
 
+// Matches the real ScriptStatus/ScriptPhase enum (src/types/firestore.ts in
+// scriptoplay-web) - underscored, not hyphenated. Production only renders a
+// single flat blue badge for phase (dashboard/projects/[projectId]); the
+// nine-color treatment here is a stylized reinterpretation, extrapolated
+// from each phase editor page's own accent color, not a literal shipped
+// component.
 export type Phase =
   | 'concept'
-  | 'world-bible'
-  | 'character-vault'
+  | 'world_bible'
+  | 'character_vault'
   | 'synopsis'
   | 'treatment'
   | 'outline'
-  | 'first-draft'
+  | 'first_draft'
   | 'revision'
-  | 'final-draft';
+  | 'final_draft';
 
 export interface PhaseTagProps {
   phase: Phase;
@@ -17,26 +23,26 @@ export interface PhaseTagProps {
 
 const LABEL: Record<Phase, string> = {
   concept: 'Concept',
-  'world-bible': 'World Bible',
-  'character-vault': 'Character Vault',
+  world_bible: 'World Bible',
+  character_vault: 'Character Vault',
   synopsis: 'Synopsis',
   treatment: 'Treatment',
   outline: 'Outline',
-  'first-draft': 'First Draft',
+  first_draft: 'First Draft',
   revision: 'Revision',
-  'final-draft': 'Final Draft',
+  final_draft: 'Final Draft',
 };
 
 const BG: Record<Phase, string> = {
   concept: 'bg-phase-concept',
-  'world-bible': 'bg-phase-world-bible',
-  'character-vault': 'bg-phase-character-vault',
+  world_bible: 'bg-phase-world_bible',
+  character_vault: 'bg-phase-character_vault',
   synopsis: 'bg-phase-synopsis',
   treatment: 'bg-phase-treatment',
   outline: 'bg-phase-outline',
-  'first-draft': 'bg-phase-first-draft',
+  first_draft: 'bg-phase-first_draft',
   revision: 'bg-phase-revision',
-  'final-draft': 'bg-phase-final-draft',
+  final_draft: 'bg-phase-final_draft',
 };
 
 /** One pill per stage of the nine-phase story pipeline (Concept -> Final Draft). */

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { StateBadge, type SpecState } from './StateBadge';
+import { StateBadge, type ClipStatus } from './StateBadge';
 
 const meta: Meta<typeof StateBadge> = {
   title: 'Design System/StateBadge',
@@ -9,14 +9,14 @@ export default meta;
 
 type Story = StoryObj<typeof StateBadge>;
 
-const STATES: SpecState[] = [
-  'prompting',
-  'processing',
-  'previewing',
-  'comparing',
-  'regenerating',
-  'approving',
-  'error-recovery',
+const STATES: ClipStatus[] = [
+  'idle',
+  'generating',
+  'polling',
+  'pending_qa',
+  'approved',
+  'killed',
+  'failed',
 ];
 
 export const AllStates: Story = {
@@ -29,5 +29,6 @@ export const AllStates: Story = {
   ),
 };
 
-export const Prompting: Story = { args: { state: 'prompting' } };
-export const ErrorRecovery: Story = { args: { state: 'error-recovery' } };
+export const Generating: Story = { args: { state: 'generating' } };
+export const Approved: Story = { args: { state: 'approved' } };
+export const Killed: Story = { args: { state: 'killed' } };
