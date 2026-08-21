@@ -3,14 +3,7 @@
  */
 
 .dark {
-  --color-brand-ink: #18181b;
-  --color-brand-primary: #be3a6b;
-  --color-brand-primary-hover: #a1315b;
-  --color-brand-text: #db8fa8;
-  --color-brand-tint-10: rgba(190, 58, 107, 0.1);
-  --color-brand-tint-15: rgba(190, 58, 107, 0.15);
-  --color-brand-tint-30: rgba(190, 58, 107, 0.3);
-  --color-brand-tint-40: rgba(190, 58, 107, 0.4);
+  --color-ink: #18181b;
   --color-success-500: #10b981;
   --color-warning-500: #f59e0b;
   --color-danger-500: #f43f5e;
@@ -35,6 +28,13 @@
   --color-surface-overlay: #17171a;
   --color-text-primary: #ffffff;
   --color-text-muted: #9ca3af;
+  --color-brand-primary: #be3a6b;
+  --color-brand-primary-hover: #a1315b;
+  --color-brand-text: #db8fa8;
+  --color-brand-tint-10: rgba(190, 58, 107, 0.1);
+  --color-brand-tint-15: rgba(190, 58, 107, 0.15);
+  --color-brand-tint-30: rgba(190, 58, 107, 0.3);
+  --color-brand-tint-40: rgba(190, 58, 107, 0.4);
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -88,7 +88,7 @@
   --typography-label: var(--font-weight-semibold) var(--font-size-xs)/var(--line-height-normal) var(--font-family-sans);
   --text-primary: var(--color-text-primary);
   --text-secondary: var(--color-text-muted);
-  --text-inverse: var(--color-brand-ink);
+  --text-inverse: var(--color-ink);
   --surface-default: var(--color-surface-default);
   --surface-muted: var(--color-surface-raised);
   --surface-border: var(--color-surface-border);

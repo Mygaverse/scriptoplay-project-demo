@@ -3,14 +3,7 @@
  */
 
 :root {
-  --color-brand-ink: #18181b;
-  --color-brand-primary: #bc2566;
-  --color-brand-primary-hover: #a01f57;
-  --color-brand-text: #bc2566;
-  --color-brand-tint-10: rgba(188, 37, 102, 0.1);
-  --color-brand-tint-15: rgba(188, 37, 102, 0.15);
-  --color-brand-tint-30: rgba(188, 37, 102, 0.3);
-  --color-brand-tint-40: rgba(188, 37, 102, 0.4);
+  --color-ink: #18181b;
   --color-success-500: #10b981;
   --color-warning-500: #f59e0b;
   --color-danger-500: #f43f5e;
@@ -35,6 +28,13 @@
   --color-surface-overlay: #ffffff;
   --color-text-primary: #18181b;
   --color-text-muted: #52525b;
+  --color-brand-primary: #bc2566;
+  --color-brand-primary-hover: #a01f57;
+  --color-brand-text: #bc2566;
+  --color-brand-tint-10: rgba(188, 37, 102, 0.1);
+  --color-brand-tint-15: rgba(188, 37, 102, 0.15);
+  --color-brand-tint-30: rgba(188, 37, 102, 0.3);
+  --color-brand-tint-40: rgba(188, 37, 102, 0.4);
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -88,7 +88,7 @@
   --typography-label: var(--font-weight-semibold) var(--font-size-xs)/var(--line-height-normal) var(--font-family-sans);
   --text-primary: var(--color-text-primary);
   --text-secondary: var(--color-text-muted);
-  --text-inverse: var(--color-brand-ink);
+  --text-inverse: var(--color-ink);
   --surface-default: var(--color-surface-default);
   --surface-muted: var(--color-surface-raised);
   --surface-border: var(--color-surface-border);

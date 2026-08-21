@@ -8,19 +8,21 @@ register(StyleDictionary);
 /**
  * Token Studio's single-file sync (free tier - multi-file sync is Pro-only)
  * exports every set nested under its own top-level key. This repo has five:
- * `global` (theme-neutral primitives - radius, spacing, type, phase colors),
- * `theme-light` / `theme-dark` (the color roles that flip when the
- * dashboard's `.dark` class toggles - surface, text, brand), `semantic`,
- * and `component`. Token references like "{color.brand.primary}" are
- * written relative to the merged tree, not "{global.color.brand.primary}",
- * so each build merges `global` with exactly ONE theme set - this is the
- * same merge Token Studio itself performs when you pick an active theme in
- * the plugin - before the tokens-studio preprocessor resolves aliases.
+ * `global` (theme-neutral primitives - radius, spacing, type, phase colors,
+ * ink, feedback colors), `theme-light` / `theme-dark` (the color roles that
+ * flip when the dashboard's `.dark` class toggles - surface, text, brand),
+ * `semantic`, and `component`. Token references like "{color.brand.primary}"
+ * are written relative to the merged tree, not
+ * "{global.color.brand.primary}", so each build merges `global` with
+ * exactly ONE theme set - the same merge Token Studio itself performs when
+ * you pick an active theme in the plugin - before the tokens-studio
+ * preprocessor resolves aliases.
  *
  * `color` is the one branch both `global` and the active theme set define,
- * so it needs a deeper merge than a flat spread: `color.brand` exists on
- * both sides too (global's `ink`, the theme's `primary`/`primary-hover`/
- * `text`) and would otherwise clobber one another.
+ * so it needs a level-two merge rather than a flat spread - but no group
+ * name is shared between them (global.color has ink/success/warning/danger/
+ * white/phase/scrim; the theme sets have surface/text/brand), so a plain
+ * spread at the `color` level is enough - nothing clobbers.
  */
 export function createConfig(theme) {
   const themeSet = theme === 'dark' ? 'theme-dark' : 'theme-light';
@@ -35,10 +37,6 @@ export function createConfig(theme) {
       color: {
         ...dictionary.global.color,
         ...dictionary[themeSet].color,
-        brand: {
-          ...dictionary.global.color.brand,
-          ...dictionary[themeSet].color.brand,
-        },
       },
     }),
   });

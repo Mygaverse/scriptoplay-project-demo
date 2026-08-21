@@ -2,14 +2,7 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-export const colorBrandInk = "#18181b";
-export const colorBrandPrimary = "#bc2566";
-export const colorBrandPrimaryHover = "#a01f57";
-export const colorBrandText = "#bc2566";
-export const colorBrandTint10 = "rgba(188, 37, 102, 0.1)";
-export const colorBrandTint15 = "rgba(188, 37, 102, 0.15)";
-export const colorBrandTint30 = "rgba(188, 37, 102, 0.3)";
-export const colorBrandTint40 = "rgba(188, 37, 102, 0.4)";
+export const colorInk = "#18181b";
 export const colorSuccess500 = "#10b981";
 export const colorWarning500 = "#f59e0b";
 export const colorDanger500 = "#f43f5e";
@@ -34,6 +27,13 @@ export const colorSurfaceBorderStrong = "#cbccd2";
 export const colorSurfaceOverlay = "#ffffff";
 export const colorTextPrimary = "#18181b";
 export const colorTextMuted = "#52525b";
+export const colorBrandPrimary = "#bc2566";
+export const colorBrandPrimaryHover = "#a01f57";
+export const colorBrandText = "#bc2566";
+export const colorBrandTint10 = "rgba(188, 37, 102, 0.1)";
+export const colorBrandTint15 = "rgba(188, 37, 102, 0.15)";
+export const colorBrandTint30 = "rgba(188, 37, 102, 0.3)";
+export const colorBrandTint40 = "rgba(188, 37, 102, 0.4)";
 export const space1 = "4px";
 export const space2 = "8px";
 export const space3 = "12px";
