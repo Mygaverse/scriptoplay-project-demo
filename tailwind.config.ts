@@ -85,6 +85,7 @@ const config: Config = {
         'token-lg': 'var(--font-size-lg)',
         'token-xl': 'var(--font-size-xl)',
         'token-2xl': 'var(--font-size-2xl)',
+        'token-3xl': 'var(--font-size-3xl)',
       },
       fontWeight: {
         'token-normal': 'var(--font-weight-normal)',

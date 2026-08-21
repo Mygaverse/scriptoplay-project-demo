@@ -34,10 +34,11 @@ jobs:
 
       - name: Fail if committed token output is stale
         run: |
-          if ! git diff --quiet -- src/styles/tokens-light.css src/styles/tokens-dark.css src/tokens/tokens.js; then
-            echo "::error::src/styles/tokens-light.css / tokens-dark.css / src/tokens/tokens.js are out of date."
+          FILES="src/styles/tokens-light.css src/styles/tokens-dark.css src/styles/tokens-bp-mobile.css src/styles/tokens-bp-tablet.css src/styles/tokens-bp-web.css src/tokens/tokens.js"
+          if ! git diff --quiet -- $FILES; then
+            echo "::error::Generated token output is out of date."
             echo "Run 'npm run tokens:build' and commit the result."
-            git diff -- src/styles/tokens-light.css src/styles/tokens-dark.css src/tokens/tokens.js
+            git diff -- $FILES
             exit 1
           fi
 

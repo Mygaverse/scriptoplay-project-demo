@@ -57,6 +57,7 @@
   --font-size-lg: 18px;
   --font-size-xl: 20px;
   --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
@@ -72,16 +73,6 @@
   --breakpoint-mobile: 0;
   --breakpoint-tablet: 768px;
   --breakpoint-web: 1440px;
-  --layout-grid-mobile-columns: 4;
-  --layout-grid-tablet-columns: 8;
-  --layout-grid-web-columns: 12;
-  --layout-grid-mobile-gutter: var(--space-4);
-  --layout-grid-mobile-margin: var(--space-4);
-  --layout-grid-tablet-gutter: var(--space-6);
-  --layout-grid-tablet-margin: var(--space-6);
-  --layout-grid-web-gutter: var(--space-6);
-  --layout-grid-web-margin: var(--space-12);
-  --typography-heading: var(--font-weight-bold) var(--font-size-2xl)/var(--line-height-tight) var(--font-family-sans);
   --typography-title: var(--font-weight-semibold) var(--font-size-sm)/var(--line-height-normal) var(--font-family-sans);
   --typography-body: var(--font-weight-normal) var(--font-size-sm)/var(--line-height-normal) var(--font-family-sans);
   --typography-caption: var(--font-weight-normal) var(--font-size-xs)/var(--line-height-normal) var(--font-family-sans);

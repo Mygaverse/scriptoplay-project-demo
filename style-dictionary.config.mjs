@@ -76,4 +76,58 @@ export function createConfig(theme) {
   };
 }
 
+/**
+ * Breakpoint is a second, orthogonal mode axis alongside light/dark - real
+ * evidence for it is scriptoplay-web's own --breakpoint-lg override
+ * (variables.css:92) and its dashboard-wide grid-cols-N usage. Unlike theme,
+ * which needs a JS-toggled class (light/dark is a user choice, not derived
+ * from anything the browser knows on its own), breakpoint IS something the
+ * browser already knows - so these tokens are real CSS custom properties
+ * scoped inside `@media (min-width: ...)` blocks instead, resolved purely
+ * by viewport width with no JS involved. That's also why this never needs
+ * crossing with the theme axis: grid and heading size don't depend on
+ * light/dark, so this is entirely separate output, not a 2x3 matrix.
+ *
+ * Only `global` + the semantic typography roles + the one active `bp-*` set
+ * are merged here - NOT all of `semantic`, since semantic.text/surface/
+ * action/feedback alias to `{color.*}` paths that only theme-light/
+ * theme-dark define; pulling those in without a theme set would leave
+ * unresolved references. Nothing this axis produces (layout.grid,
+ * typography.heading) is a color, so it doesn't need them.
+ */
+export function createBreakpointConfig(breakpoint) {
+  const bpSet = `bp-${breakpoint}`;
+  const preprocessorName = `unwrap-token-studio-sets-${bpSet}`;
+
+  StyleDictionary.registerPreprocessor({
+    name: preprocessorName,
+    preprocessor: (dictionary) => ({
+      ...dictionary.global,
+      ...dictionary[bpSet],
+      typography: {
+        ...dictionary.semantic.typography,
+        ...dictionary[bpSet].typography,
+      },
+    }),
+  });
+
+  return {
+    source: ['tokens.json'],
+    preprocessors: [preprocessorName, 'tokens-studio'],
+    platforms: {
+      css: {
+        transforms: [...StyleDictionary.hooks.transformGroups['tokens-studio'], 'name/kebab'],
+        buildPath: 'src/styles/',
+        files: [
+          {
+            destination: `tokens-bp-${breakpoint}.css`,
+            format: 'css/variables',
+            options: { outputReferences: true, selector: ':root' },
+          },
+        ],
+      },
+    },
+  };
+}
+
 export default createConfig('light');

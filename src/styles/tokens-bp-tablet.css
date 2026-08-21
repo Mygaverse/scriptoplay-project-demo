@@ -1,0 +1,71 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+@media (min-width: 768px) {
+  :root {
+  --color-ink: #18181b;
+  --color-success-500: #10b981;
+  --color-warning-500: #f59e0b;
+  --color-danger-500: #f43f5e;
+  --color-white: #ffffff;
+  --color-phase-concept: #a78bfa;
+  --color-phase-world-bible: #60a5fa;
+  --color-phase-character-vault: #34d399;
+  --color-phase-synopsis: #eab308;
+  --color-phase-treatment: #f472b6;
+  --color-phase-outline: #fb923c;
+  --color-phase-first-draft: #22d3ee;
+  --color-phase-revision: #a78bfa;
+  --color-phase-final-draft: #34d399;
+  --color-scrim-subtle: rgba(0, 0, 0, 0.4);
+  --color-scrim-default: rgba(0, 0, 0, 0.7);
+  --color-scrim-strong: rgba(0, 0, 0, 0.9);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-1-5: 6px;
+  --space-2-5: 10px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  --font-family-sans: Outfit, sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --shadow-sm: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+  --shadow-md: 0 12.5px 40px -6px rgba(28, 34, 43, 0.1);
+  --shadow-lg: 0 25px 80px -12px rgba(28, 34, 43, 0.1);
+  --breakpoint-mobile: 0;
+  --breakpoint-tablet: 768px;
+  --breakpoint-web: 1440px;
+  --layout-grid-columns: 8;
+  --layout-grid-gutter: var(--space-6);
+  --layout-grid-margin: var(--space-6);
+  --typography-title: var(--font-weight-semibold) var(--font-size-sm)/var(--line-height-normal) var(--font-family-sans);
+  --typography-body: var(--font-weight-normal) var(--font-size-sm)/var(--line-height-normal) var(--font-family-sans);
+  --typography-caption: var(--font-weight-normal) var(--font-size-xs)/var(--line-height-normal) var(--font-family-sans);
+  --typography-label: var(--font-weight-semibold) var(--font-size-xs)/var(--line-height-normal) var(--font-family-sans);
+  --typography-heading: var(--font-weight-bold) var(--font-size-2xl)/var(--line-height-tight) var(--font-family-sans);
+  }
+}
