@@ -7,6 +7,10 @@
   --color-brand-primary: #bc2566;
   --color-brand-primary-hover: #a01f57;
   --color-brand-text: #bc2566;
+  --color-brand-tint-10: rgba(188, 37, 102, 0.1);
+  --color-brand-tint-15: rgba(188, 37, 102, 0.15);
+  --color-brand-tint-30: rgba(188, 37, 102, 0.3);
+  --color-brand-tint-40: rgba(188, 37, 102, 0.4);
   --color-success-500: #10b981;
   --color-warning-500: #f59e0b;
   --color-danger-500: #f43f5e;
@@ -20,11 +24,15 @@
   --color-phase-first-draft: #22d3ee;
   --color-phase-revision: #a78bfa;
   --color-phase-final-draft: #34d399;
+  --color-scrim-subtle: rgba(0, 0, 0, 0.4);
+  --color-scrim-default: rgba(0, 0, 0, 0.7);
+  --color-scrim-strong: rgba(0, 0, 0, 0.9);
   --color-surface-bg: #f0f1f3;
   --color-surface-default: #ffffff;
   --color-surface-raised: #f2f3f5;
   --color-surface-border: #dcdce1;
   --color-surface-border-strong: #cbccd2;
+  --color-surface-overlay: #ffffff;
   --color-text-primary: #18181b;
   --color-text-muted: #52525b;
   --space-1: 4px;
@@ -84,6 +92,8 @@
   --surface-default: var(--color-surface-default);
   --surface-muted: var(--color-surface-raised);
   --surface-border: var(--color-surface-border);
+  --surface-overlay: var(--color-surface-overlay);
+  --surface-scrim: var(--color-scrim-default);
   --action-primary: var(--color-brand-primary);
   --action-primary-hover: var(--color-brand-primary-hover);
   --action-text: var(--color-brand-text);
