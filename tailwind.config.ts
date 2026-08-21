@@ -1,26 +1,27 @@
 import type { Config } from 'tailwindcss';
 
 // Colors/spacing/radius below are read from CSS custom properties emitted by
-// Style Dictionary (src/styles/tokens.css), generated from tokens/*.json.
-// Run `npm run tokens:build` after changing tokens to regenerate that file.
+// Style Dictionary (src/styles/tokens-light.css + tokens-dark.css), generated
+// from tokens.json. Run `npm run tokens:build` after changing tokens.
 const config: Config = {
+  darkMode: 'class',
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}', './.storybook/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    // 'tablet'/'web' mirror the real breakpoint.tablet (768px) and
+    // breakpoint.web (1440px) tokens - 1440 is scriptoplay-web's own
+    // --breakpoint-lg override (variables.css:92), not Tailwind's stock
+    // 1024px lg. Stock sm/md/lg/xl/2xl stay available alongside these.
     extend: {
+      screens: {
+        tablet: '768px',
+        web: '1440px',
+      },
       colors: {
         brand: {
           primary: 'var(--color-brand-primary)',
-          'primary-dark': 'var(--color-brand-primary-dark)',
+          'primary-dark': 'var(--color-brand-primary-hover)',
+          text: 'var(--color-brand-text)',
           ink: 'var(--color-brand-ink)',
-        },
-        grey: {
-          bg: 'var(--color-grey-bg)',
-          surface: 'var(--color-grey-surface)',
-          'surface-raised': 'var(--color-grey-surface-raised)',
-          border: 'var(--color-grey-border)',
-          'border-strong': 'var(--color-grey-border-strong)',
-          text: 'var(--color-grey-text)',
-          'text-muted': 'var(--color-grey-text-muted)',
         },
         success: { 500: 'var(--color-success-500)' },
         warning: { 500: 'var(--color-warning-500)' },

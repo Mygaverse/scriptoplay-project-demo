@@ -2,17 +2,11 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-:root {
-  --color-brand-primary: #be3a6b;
-  --color-brand-primary-dark: #a1315b;
+.dark {
   --color-brand-ink: #18181b;
-  --color-grey-bg: #0a0a0a;
-  --color-grey-surface: #17171a;
-  --color-grey-surface-raised: #1f1f22;
-  --color-grey-border: #262626;
-  --color-grey-border-strong: #3a3a3a;
-  --color-grey-text: #ffffff;
-  --color-grey-text-muted: #9ca3af;
+  --color-brand-primary: #be3a6b;
+  --color-brand-primary-hover: #a1315b;
+  --color-brand-text: #db8fa8;
   --color-success-500: #10b981;
   --color-warning-500: #f59e0b;
   --color-danger-500: #f43f5e;
@@ -26,6 +20,13 @@
   --color-phase-first-draft: #22d3ee;
   --color-phase-revision: #a78bfa;
   --color-phase-final-draft: #34d399;
+  --color-surface-bg: #0a0a0a;
+  --color-surface-default: #17171a;
+  --color-surface-raised: #1f1f22;
+  --color-surface-border: #262626;
+  --color-surface-border-strong: #3a3a3a;
+  --color-text-primary: #ffffff;
+  --color-text-muted: #9ca3af;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -60,14 +61,27 @@
   --shadow-sm: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
   --shadow-md: 0 12.5px 40px -6px rgba(28, 34, 43, 0.1);
   --shadow-lg: 0 25px 80px -12px rgba(28, 34, 43, 0.1);
-  --text-primary: var(--color-grey-text);
-  --text-secondary: var(--color-grey-text-muted);
+  --breakpoint-mobile: 0;
+  --breakpoint-tablet: 768px;
+  --breakpoint-web: 1440px;
+  --layout-grid-mobile-columns: 4;
+  --layout-grid-tablet-columns: 8;
+  --layout-grid-web-columns: 12;
+  --layout-grid-mobile-gutter: var(--space-4);
+  --layout-grid-mobile-margin: var(--space-4);
+  --layout-grid-tablet-gutter: var(--space-6);
+  --layout-grid-tablet-margin: var(--space-6);
+  --layout-grid-web-gutter: var(--space-6);
+  --layout-grid-web-margin: var(--space-12);
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-muted);
   --text-inverse: var(--color-brand-ink);
-  --surface-default: var(--color-grey-surface);
-  --surface-muted: var(--color-grey-surface-raised);
-  --surface-border: var(--color-grey-border);
+  --surface-default: var(--color-surface-default);
+  --surface-muted: var(--color-surface-raised);
+  --surface-border: var(--color-surface-border);
   --action-primary: var(--color-brand-primary);
-  --action-primary-hover: var(--color-brand-primary-dark);
+  --action-primary-hover: var(--color-brand-primary-hover);
+  --action-text: var(--color-brand-text);
   --feedback-success: var(--color-success-500);
   --feedback-warning: var(--color-warning-500);
   --feedback-danger: var(--color-danger-500);
