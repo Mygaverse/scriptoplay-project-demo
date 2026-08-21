@@ -68,7 +68,9 @@ const config: Config = {
         'token-full': 'var(--radius-full)',
       },
       fontFamily: {
-        sans: ['var(--font-family-sans)', 'sans-serif'],
+        // Token's own value already ends in ", sans-serif" (matches
+        // variables.css:10's real --font-outfit definition).
+        sans: ['var(--font-family-sans)'],
       },
       fontSize: {
         'token-xs': 'var(--font-size-xs)',

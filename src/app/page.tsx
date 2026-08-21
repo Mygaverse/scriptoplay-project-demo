@@ -33,10 +33,10 @@ export default function Home() {
       <div className="mx-auto max-w-3xl space-y-token-6">
         <div className="flex items-start justify-between gap-token-4">
           <div>
-            <h1 className="text-2xl font-semibold text-text-primary">
+            <h1 className="text-heading text-text-primary">
               Scriptoplay Design System — Token Pipeline Demo
             </h1>
-            <p className="mt-2 text-sm text-text-secondary">
+            <p className="mt-2 text-body text-text-secondary">
               Every value on this page is generated from <code>tokens.json</code>{' '}
               via Style Dictionary. See <code>src/styles/tokens-light.css</code> /{' '}
               <code>tokens-dark.css</code> for the generated output, and{' '}
@@ -58,7 +58,7 @@ export default function Home() {
             <Badge tone="danger">Failed</Badge>
           </div>
           <div>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-text-secondary">
+            <p className="mb-2 text-label uppercase tracking-wide text-text-secondary">
               Nine-phase pipeline
             </p>
             <div className="flex flex-wrap gap-2">
@@ -68,7 +68,7 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-text-secondary">
+            <p className="mb-2 text-label uppercase tracking-wide text-text-secondary">
               AI clip-generation states
             </p>
             <div className="flex flex-wrap gap-2">
@@ -80,10 +80,10 @@ export default function Home() {
         </Card>
 
         <Card className="space-y-token-2">
-          <p className="text-xs font-semibold uppercase tracking-wide text-text-secondary">
+          <p className="text-label uppercase tracking-wide text-text-secondary">
             Layout / grid — resize the window to see it switch
           </p>
-          <p className="text-sm text-text-primary">
+          <p className="text-body text-text-primary">
             Current breakpoint:{' '}
             <span className="font-semibold tablet:hidden">Mobile (4-col grid)</span>
             <span className="hidden font-semibold tablet:inline web:hidden">

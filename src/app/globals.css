@@ -10,7 +10,38 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* next/font (layout.tsx) self-hosts the real Outfit files under a
+     generated internal name, exposed only via --font-outfit - the literal
+     string "Outfit" in the token's own value never matches an installed
+     font, so it stays as the fallback the token itself declares. */
+  --font-family-sans: var(--font-outfit), Outfit, sans-serif;
+}
+
 body {
   color: var(--text-primary);
   background: var(--surface-muted);
+  font-family: var(--font-family-sans);
+}
+
+/* Named text styles from the semantic.typography.* composite tokens - each
+   --typography-* var is a full CSS `font` shorthand (weight size/line-height
+   family), so applying one is a single declaration. These are what Token
+   Studio's typography $type token produces as Figma text styles. */
+@layer utilities {
+  .text-heading {
+    font: var(--typography-heading);
+  }
+  .text-title {
+    font: var(--typography-title);
+  }
+  .text-body {
+    font: var(--typography-body);
+  }
+  .text-caption {
+    font: var(--typography-caption);
+  }
+  .text-label {
+    font: var(--typography-label);
+  }
 }
