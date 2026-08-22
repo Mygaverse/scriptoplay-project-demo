@@ -30,6 +30,7 @@
   --color-text-muted: #52525b;
   --color-brand-primary: #bc2566;
   --color-brand-primary-hover: #a01f57;
+  --color-brand-secondary: #7a3e86;
   --color-brand-text: #bc2566;
   --color-brand-tint-10: rgba(188, 37, 102, 0.1);
   --color-brand-tint-15: rgba(188, 37, 102, 0.15);
@@ -88,11 +89,14 @@
   --action-primary: var(--color-brand-primary);
   --action-primary-hover: var(--color-brand-primary-hover);
   --action-text: var(--color-brand-text);
+  --action-gradient: linear-gradient(90deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
   --feedback-success: var(--color-success-500);
   --feedback-warning: var(--color-warning-500);
   --feedback-danger: var(--color-danger-500);
   --button-primary-fg: var(--color-white);
   --button-primary-radius: var(--radius-md);
+  --button-gradient-fg: var(--color-white);
+  --button-gradient-radius: var(--radius-md);
   --card-radius: var(--radius-lg);
   --phase-tag-concept-bg: var(--color-phase-concept);
   --phase-tag-world-bible-bg: var(--color-phase-world-bible);
@@ -109,6 +113,7 @@
   --state-badge-failed-fg: var(--color-white);
   --button-primary-bg: var(--action-primary);
   --button-primary-bg-hover: var(--action-primary-hover);
+  --button-gradient-bg: var(--action-gradient);
   --badge-success-bg: var(--feedback-success);
   --badge-success-fg: var(--text-inverse);
   --badge-warning-bg: var(--feedback-warning);

@@ -29,6 +29,7 @@ export const colorTextPrimary = "#18181b";
 export const colorTextMuted = "#52525b";
 export const colorBrandPrimary = "#bc2566";
 export const colorBrandPrimaryHover = "#a01f57";
+export const colorBrandSecondary = "#7a3e86";
 export const colorBrandText = "#bc2566";
 export const colorBrandTint10 = "rgba(188, 37, 102, 0.1)";
 export const colorBrandTint15 = "rgba(188, 37, 102, 0.15)";
@@ -87,6 +88,8 @@ export const surfaceScrim = "rgba(0, 0, 0, 0.7)";
 export const actionPrimary = "#bc2566";
 export const actionPrimaryHover = "#a01f57";
 export const actionText = "#bc2566";
+export const actionGradient =
+  "linear-gradient(90deg, #bc2566 0%, #7a3e86 100%)";
 export const feedbackSuccess = "#10b981";
 export const feedbackWarning = "#f59e0b";
 export const feedbackDanger = "#f43f5e";
@@ -94,6 +97,10 @@ export const buttonPrimaryBg = "#bc2566";
 export const buttonPrimaryBgHover = "#a01f57";
 export const buttonPrimaryFg = "#ffffff";
 export const buttonPrimaryRadius = "8px";
+export const buttonGradientBg =
+  "linear-gradient(90deg, #bc2566 0%, #7a3e86 100%)";
+export const buttonGradientFg = "#ffffff";
+export const buttonGradientRadius = "8px";
 export const badgeSuccessBg = "#10b981";
 export const badgeSuccessFg = "#18181b";
 export const badgeWarningBg = "#f59e0b";

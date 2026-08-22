@@ -20,6 +20,7 @@ const config: Config = {
         brand: {
           primary: 'var(--color-brand-primary)',
           'primary-dark': 'var(--color-brand-primary-hover)',
+          secondary: 'var(--color-brand-secondary)',
           text: 'var(--color-brand-text)',
           'tint-10': 'var(--color-brand-tint-10)',
           'tint-15': 'var(--color-brand-tint-15)',
@@ -104,6 +105,14 @@ const config: Config = {
         'token-sm': 'var(--shadow-sm)',
         'token-md': 'var(--shadow-md)',
         'token-lg': 'var(--shadow-lg)',
+      },
+      backgroundImage: {
+        // A gradient can't be a Figma/Token Studio variable itself - only
+        // its stops can. This points at --button-gradient-bg, which Style
+        // Dictionary resolved from a raw linear-gradient() string with
+        // {color.brand.primary}/{color.brand.secondary} references baked
+        // in, so it still flips correctly between light and dark.
+        'button-gradient': 'var(--button-gradient-bg)',
       },
     },
   },

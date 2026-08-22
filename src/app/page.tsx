@@ -60,6 +60,7 @@ export default function Home() {
           <div className="flex items-center gap-token-4">
             <Button>Generate</Button>
             <Button variant="secondary">Cancel</Button>
+            <Button variant="gradient">Launch New IP</Button>
           </div>
           <div className="flex items-center gap-token-4">
             <Badge tone="success">Approved</Badge>
