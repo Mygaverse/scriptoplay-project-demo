@@ -19,10 +19,15 @@ register(StyleDictionary);
  * preprocessor resolves aliases.
  *
  * `color` is the one branch both `global` and the active theme set define,
- * so it needs a level-two merge rather than a flat spread - but no group
- * name is shared between them (global.color has ink/success/warning/danger/
+ * so it needs a level-two merge rather than a flat spread. Most second-level
+ * groups only exist on one side (global has ink/success/warning/danger/
  * white/phase/scrim; the theme sets have surface/text/brand), so a plain
- * spread at the `color` level is enough - nothing clobbers.
+ * spread at the `color` level covers those - but `accent` is split across
+ * both (global holds the theme-neutral tint-bg/tint-border, since those use
+ * Tailwind opacity syntax with no `dark:` override and are literally the
+ * same value either way; the theme sets hold icon/solid-bg/solid-fg, which
+ * do differ), so it needs its own explicit deep merge or the theme side
+ * would silently clobber global's tint values.
  */
 export function createConfig(theme) {
   const themeSet = theme === 'dark' ? 'theme-dark' : 'theme-light';
@@ -37,6 +42,12 @@ export function createConfig(theme) {
       color: {
         ...dictionary.global.color,
         ...dictionary[themeSet].color,
+        accent: Object.fromEntries(
+          Object.keys(dictionary.global.color.accent).map((hue) => [
+            hue,
+            { ...dictionary.global.color.accent[hue], ...dictionary[themeSet].color.accent[hue] },
+          ]),
+        ),
       },
     }),
   });

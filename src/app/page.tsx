@@ -4,6 +4,8 @@ import { Card } from '@/components/Card';
 import { PhaseTag, type Phase } from '@/components/PhaseTag';
 import { StateBadge, type ClipStatus } from '@/components/StateBadge';
 import { ThemeToggle } from '@/components/ThemeToggle';
+import { RoleBadge, type CharacterRole } from '@/components/RoleBadge';
+import { ToolCard } from '@/components/ToolCard';
 
 const PHASES: Phase[] = [
   'concept',
@@ -34,6 +36,16 @@ const TINTS = [
   { label: '15%', className: 'bg-brand-tint-15' },
   { label: '30%', className: 'bg-brand-tint-30' },
   { label: '40%', className: 'bg-brand-tint-40' },
+];
+
+const ROLES: CharacterRole[] = [
+  'protagonist',
+  'antagonist',
+  'supporting',
+  'mentor',
+  'comic_relief',
+  'love_interest',
+  'other',
 ];
 
 export default function Home() {
@@ -135,6 +147,47 @@ export default function Home() {
               <div className="absolute inset-0 flex items-center justify-center bg-surface-scrim">
                 <span className="text-title text-white">Modal scrim over content</span>
               </div>
+            </div>
+          </div>
+        </Card>
+
+        <Card className="space-y-token-4">
+          <div>
+            <p className="mb-2 text-label uppercase tracking-wide text-text-secondary">
+              Character roles
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {ROLES.map((role) => (
+                <RoleBadge key={role} role={role} />
+              ))}
+            </div>
+          </div>
+          <div>
+            <p className="mb-2 text-label uppercase tracking-wide text-text-secondary">
+              Tool cards
+            </p>
+            <div className="grid grid-cols-1 tablet:grid-cols-3 gap-token-3">
+              <ToolCard
+                color="blue"
+                icon={<span>🔊</span>}
+                title="Voice Studio"
+                description="Cast voices for each character and generate narrated audio."
+                status="3 of 3 cast"
+              />
+              <ToolCard
+                color="emerald"
+                icon={<span>🔗</span>}
+                title="Relationship Builder"
+                description="Map how your characters connect to each other."
+                status="No connections yet"
+              />
+              <ToolCard
+                color="amber"
+                icon={<span>📦</span>}
+                title="Prop Builder"
+                description="Define story-essential props with reference images."
+                status="No story props yet"
+              />
             </div>
           </div>
         </Card>

@@ -54,6 +54,78 @@ const config: Config = {
           revision: 'var(--color-phase-revision)',
           final_draft: 'var(--color-phase-final-draft)',
         },
+        // bg-*/text-*/border-* each need their own flat color key even
+        // though they're conceptually one "role" or "tool card hue" - a
+        // Tailwind color entry can only supply one value, shared by every
+        // utility built from it, so bg/fg/border (and tool cards' icon/cta
+        // split) can't live under a single 'role' or 'accent' key.
+        'role-bg': {
+          protagonist: 'var(--role-badge-protagonist-bg)',
+          antagonist: 'var(--role-badge-antagonist-bg)',
+          supporting: 'var(--role-badge-supporting-bg)',
+          mentor: 'var(--role-badge-mentor-bg)',
+          comic_relief: 'var(--role-badge-comic-relief-bg)',
+          love_interest: 'var(--role-badge-love-interest-bg)',
+          other: 'var(--role-badge-other-bg)',
+        },
+        'role-fg': {
+          protagonist: 'var(--role-badge-protagonist-fg)',
+          antagonist: 'var(--role-badge-antagonist-fg)',
+          supporting: 'var(--role-badge-supporting-fg)',
+          mentor: 'var(--role-badge-mentor-fg)',
+          comic_relief: 'var(--role-badge-comic-relief-fg)',
+          love_interest: 'var(--role-badge-love-interest-fg)',
+          other: 'var(--role-badge-other-fg)',
+        },
+        'role-border': {
+          protagonist: 'var(--role-badge-protagonist-border)',
+          antagonist: 'var(--role-badge-antagonist-border)',
+          supporting: 'var(--role-badge-supporting-border)',
+          mentor: 'var(--role-badge-mentor-border)',
+          comic_relief: 'var(--role-badge-comic-relief-border)',
+          love_interest: 'var(--role-badge-love-interest-border)',
+          other: 'var(--role-badge-other-border)',
+        },
+        'tool-icon-bg': {
+          blue: 'var(--tool-card-blue-icon-bg)',
+          purple: 'var(--tool-card-purple-icon-bg)',
+          emerald: 'var(--tool-card-emerald-icon-bg)',
+          amber: 'var(--tool-card-amber-icon-bg)',
+          cyan: 'var(--tool-card-cyan-icon-bg)',
+          rose: 'var(--tool-card-rose-icon-bg)',
+        },
+        'tool-icon-border': {
+          blue: 'var(--tool-card-blue-icon-border)',
+          purple: 'var(--tool-card-purple-icon-border)',
+          emerald: 'var(--tool-card-emerald-icon-border)',
+          amber: 'var(--tool-card-amber-icon-border)',
+          cyan: 'var(--tool-card-cyan-icon-border)',
+          rose: 'var(--tool-card-rose-icon-border)',
+        },
+        'tool-icon-fg': {
+          blue: 'var(--tool-card-blue-icon-fg)',
+          purple: 'var(--tool-card-purple-icon-fg)',
+          emerald: 'var(--tool-card-emerald-icon-fg)',
+          amber: 'var(--tool-card-amber-icon-fg)',
+          cyan: 'var(--tool-card-cyan-icon-fg)',
+          rose: 'var(--tool-card-rose-icon-fg)',
+        },
+        'tool-cta-bg': {
+          blue: 'var(--tool-card-blue-cta-bg)',
+          purple: 'var(--tool-card-purple-cta-bg)',
+          emerald: 'var(--tool-card-emerald-cta-bg)',
+          amber: 'var(--tool-card-amber-cta-bg)',
+          cyan: 'var(--tool-card-cyan-cta-bg)',
+          rose: 'var(--tool-card-rose-cta-bg)',
+        },
+        'tool-cta-fg': {
+          blue: 'var(--tool-card-blue-cta-fg)',
+          purple: 'var(--tool-card-purple-cta-fg)',
+          emerald: 'var(--tool-card-emerald-cta-fg)',
+          amber: 'var(--tool-card-amber-cta-fg)',
+          cyan: 'var(--tool-card-cyan-cta-fg)',
+          rose: 'var(--tool-card-rose-cta-fg)',
+        },
       },
       spacing: {
         'token-1': 'var(--space-1)',
