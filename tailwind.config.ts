@@ -33,7 +33,9 @@ const config: Config = {
         danger: { 500: 'var(--color-danger-500)' },
         text: {
           primary: 'var(--text-primary)',
+          soft: 'var(--text-soft)',
           secondary: 'var(--text-secondary)',
+          subtle: 'var(--text-subtle)',
           inverse: 'var(--text-inverse)',
         },
         surface: {

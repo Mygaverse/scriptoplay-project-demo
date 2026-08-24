@@ -191,6 +191,16 @@ export default function Home() {
             </div>
           </div>
         </Card>
+
+        <Card className="space-y-token-2">
+          <p className="text-label uppercase tracking-wide text-text-secondary">
+            Text scale (primary / soft / secondary / subtle)
+          </p>
+          <p className="text-body text-text-primary">Primary — the default reading color.</p>
+          <p className="text-body text-text-soft">Soft — one step down, still easy to read.</p>
+          <p className="text-body text-text-secondary">Secondary — captions and metadata.</p>
+          <p className="text-body text-text-subtle">Subtle — the lowest-emphasis tier, timestamps and counts.</p>
+        </Card>
       </div>
     </main>
   );

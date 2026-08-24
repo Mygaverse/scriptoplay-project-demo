@@ -57,7 +57,9 @@
   --color-surface-border-strong: #cbccd2;
   --color-surface-overlay: #ffffff;
   --color-text-primary: #18181b;
+  --color-text-soft: #3f3f46;
   --color-text-muted: #52525b;
+  --color-text-subtle: #71717a;
   --color-brand-primary: #bc2566;
   --color-brand-primary-hover: #a01f57;
   --color-brand-secondary: #7a3e86;
@@ -130,7 +132,9 @@
   --typography-caption: var(--font-weight-normal) var(--font-size-xs)/var(--line-height-normal) var(--font-family-sans);
   --typography-label: var(--font-weight-semibold) var(--font-size-xs)/var(--line-height-normal) var(--font-family-sans);
   --text-primary: var(--color-text-primary);
+  --text-soft: var(--color-text-soft);
   --text-secondary: var(--color-text-muted);
+  --text-subtle: var(--color-text-subtle);
   --text-inverse: var(--color-ink);
   --surface-default: var(--color-surface-default);
   --surface-muted: var(--color-surface-raised);
