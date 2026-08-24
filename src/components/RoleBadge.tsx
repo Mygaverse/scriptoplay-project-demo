@@ -41,7 +41,7 @@ export function RoleBadge({ role }: RoleBadgeProps) {
   return (
     <span
       className={clsx(
-        'inline-flex items-center px-token-2_5 py-0.5 rounded-token-full border text-xs font-semibold',
+        'inline-flex items-center px-token-2_5 py-0.5 rounded-token-full border text-token-2xs font-bold',
         COLORS[role],
       )}
     >
