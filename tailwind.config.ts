@@ -154,6 +154,11 @@ const config: Config = {
         sans: ['var(--font-family-sans)'],
       },
       fontSize: {
+        // 11px - not a formal Tailwind scale step in scriptoplay-web, but
+        // used as an arbitrary text-[11px] value ~950x across the dashboard
+        // (section headers, badges, meta labels) - more often than
+        // text-xs/text-sm individually. Formalized here as its own tier.
+        'token-2xs': 'var(--font-size-2xs)',
         'token-xs': 'var(--font-size-xs)',
         'token-sm': 'var(--font-size-sm)',
         'token-base': 'var(--font-size-base)',

@@ -4,9 +4,9 @@
 
 :root {
   --color-ink: #18181b;
-  --color-success-500: #00bc7d;
+  --color-success-500: #00c951;
   --color-warning-500: #fe9a00;
-  --color-danger-500: #ff2056;
+  --color-danger-500: #fb2c36;
   --color-white: #ffffff;
   --color-phase-concept: #a78bfa;
   --color-phase-world-bible: #60a5fa;
@@ -104,6 +104,7 @@
   --radius-lg: 12px;
   --radius-full: 9999px;
   --font-family-sans: Outfit, sans-serif;
+  --font-size-2xs: 11px;
   --font-size-xs: 12px;
   --font-size-sm: 14px;
   --font-size-base: 16px;

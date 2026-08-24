@@ -201,6 +201,17 @@ export default function Home() {
           <p className="text-body text-text-secondary">Secondary — captions and metadata.</p>
           <p className="text-body text-text-subtle">Subtle — the lowest-emphasis tier, timestamps and counts.</p>
         </Card>
+
+        <Card className="space-y-token-2">
+          <p className="text-label uppercase tracking-wide text-text-secondary">
+            Font size scale — 2xs added
+          </p>
+          <p className="text-token-2xs uppercase tracking-wide text-text-subtle">
+            2xs / 11px — section headers, pill badges, scene tags
+          </p>
+          <p className="text-token-xs text-text-secondary">xs / 12px — captions, labels</p>
+          <p className="text-token-sm text-text-primary">sm / 14px — body, titles</p>
+        </Card>
       </div>
     </main>
   );
