@@ -184,6 +184,10 @@ const config: Config = {
         'token-md': 'var(--shadow-md)',
         'token-lg': 'var(--shadow-lg)',
       },
+      opacity: {
+        'token-hover': 'var(--opacity-hover)',
+        'token-disabled': 'var(--opacity-disabled)',
+      },
       backgroundImage: {
         // A gradient can't be a Figma/Token Studio variable itself - only
         // its stops can. This points at --button-gradient-bg, which Style
