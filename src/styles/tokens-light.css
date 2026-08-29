@@ -61,7 +61,6 @@
   --color-text-muted: #52525b;
   --color-text-subtle: #71717a;
   --color-brand-primary: #bc2566;
-  --color-brand-primary-hover: #a01f57;
   --color-brand-secondary: #7a3e86;
   --color-brand-text: #bc2566;
   --color-brand-tint-10: rgba(188, 37, 102, 0.1);
@@ -143,7 +142,6 @@
   --surface-overlay: var(--color-surface-overlay);
   --surface-scrim: var(--color-scrim-default);
   --action-primary: var(--color-brand-primary);
-  --action-primary-hover: var(--color-brand-primary-hover);
   --action-text: var(--color-brand-text);
   --action-gradient: linear-gradient(90deg, var(--color-brand-primary) 0%, var(--color-brand-secondary) 100%);
   --feedback-success: var(--color-success-500);
@@ -200,7 +198,7 @@
   --accent-rose-solid-bg: var(--color-accent-rose-solid-bg);
   --accent-rose-solid-fg: var(--color-accent-rose-solid-fg);
   --button-primary-fg: var(--color-white);
-  --button-primary-radius: var(--radius-md);
+  --button-primary-radius: var(--radius-lg);
   --button-gradient-fg: var(--color-white);
   --button-gradient-radius: var(--radius-md);
   --card-radius: var(--radius-lg);
@@ -219,7 +217,6 @@
   --state-badge-failed-fg: var(--color-white);
   --role-other-fg: var(--color-role-other-fg);
   --button-primary-bg: var(--action-primary);
-  --button-primary-bg-hover: var(--action-primary-hover);
   --button-gradient-bg: var(--action-gradient);
   --badge-success-bg: var(--feedback-success);
   --badge-success-fg: var(--text-inverse);

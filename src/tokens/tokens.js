@@ -60,7 +60,6 @@ export const colorTextSoft = "#3f3f46";
 export const colorTextMuted = "#52525b";
 export const colorTextSubtle = "#71717a";
 export const colorBrandPrimary = "#bc2566";
-export const colorBrandPrimaryHover = "#a01f57";
 export const colorBrandSecondary = "#7a3e86";
 export const colorBrandText = "#bc2566";
 export const colorBrandTint10 = "rgba(188, 37, 102, 0.1)";
@@ -142,7 +141,6 @@ export const surfaceBorder = "#dcdce1";
 export const surfaceOverlay = "#ffffff";
 export const surfaceScrim = "rgba(0, 0, 0, 0.7)";
 export const actionPrimary = "#bc2566";
-export const actionPrimaryHover = "#a01f57";
 export const actionText = "#bc2566";
 export const actionGradient =
   "linear-gradient(90deg, #bc2566 0%, #7a3e86 100%)";
@@ -201,9 +199,8 @@ export const accentRoseIcon = "#ec003f";
 export const accentRoseSolidBg = "#ec003f";
 export const accentRoseSolidFg = "#ffffff";
 export const buttonPrimaryBg = "#bc2566";
-export const buttonPrimaryBgHover = "#a01f57";
 export const buttonPrimaryFg = "#ffffff";
-export const buttonPrimaryRadius = "8px";
+export const buttonPrimaryRadius = "12px";
 export const buttonGradientBg =
   "linear-gradient(90deg, #bc2566 0%, #7a3e86 100%)";
 export const buttonGradientFg = "#ffffff";

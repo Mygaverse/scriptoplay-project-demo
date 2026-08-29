@@ -19,7 +19,6 @@ const config: Config = {
       colors: {
         brand: {
           primary: 'var(--color-brand-primary)',
-          'primary-dark': 'var(--color-brand-primary-hover)',
           secondary: 'var(--color-brand-secondary)',
           text: 'var(--color-brand-text)',
           'tint-10': 'var(--color-brand-tint-10)',
