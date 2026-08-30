@@ -37,3 +37,14 @@ export const VoiceStudio: Story = {
     status: '3 of 3 cast',
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    color: 'blue',
+    icon: <span>🔊</span>,
+    title: 'Voice Studio',
+    description: 'Cast voices for each character and the narrator. Generate narrated audio from your dialogue lines.',
+    status: 'Locked',
+    disabled: true,
+  },
+};

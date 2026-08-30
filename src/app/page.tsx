@@ -6,6 +6,7 @@ import { StateBadge, type ClipStatus } from '@/components/StateBadge';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { RoleBadge, type CharacterRole } from '@/components/RoleBadge';
 import { ToolCard } from '@/components/ToolCard';
+import { FeatureCard } from '@/components/FeatureCard';
 
 const PHASES: Phase[] = [
   'concept',
@@ -188,7 +189,35 @@ export default function Home() {
                 description="Define story-essential props with reference images."
                 status="No story props yet"
               />
+              <ToolCard
+                color="purple"
+                icon={<span>🔒</span>}
+                title="Faction Builder"
+                description="Not available for this project yet."
+                status="Locked"
+                disabled
+              />
             </div>
+          </div>
+        </Card>
+
+        <Card className="space-y-token-2">
+          <p className="text-label uppercase tracking-wide text-text-secondary">
+            Dashboard-home launcher tiles — white→grey gradient, hover to see the icon swap
+          </p>
+          <div className="grid grid-cols-1 tablet:grid-cols-2 gap-token-4">
+            <FeatureCard
+              color="blue"
+              icon={<span>🔍</span>}
+              title="Script Scan"
+              description="Has a story in mind? Paste your storyline or just upload your script."
+            />
+            <FeatureCard
+              color="pink"
+              icon={<span>🎭</span>}
+              title="Writers&rsquo; Room"
+              description="Simulate scenes and dialogue with AI characters."
+            />
           </div>
         </Card>
 

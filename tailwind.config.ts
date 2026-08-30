@@ -41,6 +41,7 @@ const config: Config = {
           default: 'var(--surface-default)',
           muted: 'var(--surface-muted)',
           border: 'var(--surface-border)',
+          'border-strong': 'var(--surface-border-strong)',
           overlay: 'var(--surface-overlay)',
           scrim: 'var(--surface-scrim)',
         },
@@ -127,6 +128,48 @@ const config: Config = {
           cyan: 'var(--tool-card-cyan-cta-fg)',
           rose: 'var(--tool-card-rose-cta-fg)',
         },
+        // Real evidence (ModuleLauncherCard.tsx:42-47): hover:border-{hue}-500/40
+        // ring, only on hover and only when the card isn't disabled.
+        'tool-hover-border': {
+          blue: 'var(--tool-card-blue-hover-border)',
+          purple: 'var(--tool-card-purple-hover-border)',
+          emerald: 'var(--tool-card-emerald-hover-border)',
+          amber: 'var(--tool-card-amber-hover-border)',
+          cyan: 'var(--tool-card-cyan-hover-border)',
+          rose: 'var(--tool-card-rose-hover-border)',
+        },
+        // Real evidence (app/dashboard/page.tsx:147-203): the Dashboard-home
+        // launcher tiles' icon chip goes from a tint (bg-{hue}-500/10 +
+        // text-{hue}-600/400) to a fully solid fill + white icon on
+        // group-hover - same in both themes, no dark: override, unlike
+        // tool card's CTA pill above.
+        'feature-icon-bg': {
+          blue: 'var(--feature-card-blue-icon-bg)',
+          purple: 'var(--feature-card-purple-icon-bg)',
+          emerald: 'var(--feature-card-emerald-icon-bg)',
+          amber: 'var(--feature-card-amber-icon-bg)',
+          cyan: 'var(--feature-card-cyan-icon-bg)',
+          rose: 'var(--feature-card-rose-icon-bg)',
+          pink: 'var(--feature-card-pink-icon-bg)',
+        },
+        'feature-icon-fg': {
+          blue: 'var(--feature-card-blue-icon-fg)',
+          purple: 'var(--feature-card-purple-icon-fg)',
+          emerald: 'var(--feature-card-emerald-icon-fg)',
+          amber: 'var(--feature-card-amber-icon-fg)',
+          cyan: 'var(--feature-card-cyan-icon-fg)',
+          rose: 'var(--feature-card-rose-icon-fg)',
+          pink: 'var(--feature-card-pink-icon-fg)',
+        },
+        'feature-icon-hover-bg': {
+          blue: 'var(--feature-card-blue-icon-hover-bg)',
+          purple: 'var(--feature-card-purple-icon-hover-bg)',
+          emerald: 'var(--feature-card-emerald-icon-hover-bg)',
+          amber: 'var(--feature-card-amber-icon-hover-bg)',
+          cyan: 'var(--feature-card-cyan-icon-hover-bg)',
+          rose: 'var(--feature-card-rose-icon-hover-bg)',
+          pink: 'var(--feature-card-pink-icon-hover-bg)',
+        },
       },
       spacing: {
         'token-1': 'var(--space-1)',
@@ -145,6 +188,9 @@ const config: Config = {
         'token-sm': 'var(--radius-sm)',
         'token-md': 'var(--radius-md)',
         'token-lg': 'var(--radius-lg)',
+        // 24px / rounded-3xl - the Dashboard-home launcher tiles
+        // (app/dashboard/page.tsx:147 etc.), bigger than anything else here.
+        'token-xl': 'var(--radius-xl)',
         'token-full': 'var(--radius-full)',
       },
       fontFamily: {
@@ -183,6 +229,9 @@ const config: Config = {
         'token-sm': 'var(--shadow-sm)',
         'token-md': 'var(--shadow-md)',
         'token-lg': 'var(--shadow-lg)',
+        // Stock Tailwind shadow-xl (no override in scriptoplay-web's config)
+        // - the Dashboard-home launcher tiles' hover:shadow-xl.
+        'token-xl': 'var(--shadow-xl)',
       },
       opacity: {
         'token-hover': 'var(--opacity-hover)',
@@ -195,6 +244,11 @@ const config: Config = {
         // {color.brand.primary}/{color.brand.secondary} references baked
         // in, so it still flips correctly between light and dark.
         'button-gradient': 'var(--button-gradient-bg)',
+        // Real evidence (app/dashboard/page.tsx:147 etc.): the Dashboard-home
+        // launcher tiles' white->grey diagonal (bg-gradient-to-br from-card
+        // to-raised) - a surface gradient, not a brand one, so it lives on
+        // its own token rather than reusing button-gradient.
+        'surface-gradient': 'var(--surface-gradient)',
       },
     },
   },

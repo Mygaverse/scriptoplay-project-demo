@@ -12,6 +12,9 @@ export interface ToolCardProps {
   status: string;
   ctaLabel?: string;
   color?: ToolCardColor;
+  /** Real evidence (ModuleLauncherCard.tsx:68-69): disabled tools dim to
+   * opacity-50 and suppress the hover ring/surface-swap entirely. */
+  disabled?: boolean;
 }
 
 const ICON_BG: Record<ToolCardColor, string> = {
@@ -32,10 +35,40 @@ const CTA: Record<ToolCardColor, string> = {
   rose: 'bg-tool-cta-bg-rose text-tool-cta-fg-rose',
 };
 
+// Real evidence (ModuleLauncherCard.tsx:42-47, 68-69): hover swaps the card
+// surface bg-sunken -> bg-card and adds a colored ring, hover:border-{hue}-500/40.
+const HOVER_BORDER: Record<ToolCardColor, string> = {
+  blue: 'hover:border-tool-hover-border-blue',
+  purple: 'hover:border-tool-hover-border-purple',
+  emerald: 'hover:border-tool-hover-border-emerald',
+  amber: 'hover:border-tool-hover-border-amber',
+  cyan: 'hover:border-tool-hover-border-cyan',
+  rose: 'hover:border-tool-hover-border-rose',
+};
+
 /** A module-launcher tile: icon, title, description, status, and a colored CTA pill. */
-export function ToolCard({ icon, title, description, status, ctaLabel = 'Open', color = 'blue' }: ToolCardProps) {
+export function ToolCard({
+  icon,
+  title,
+  description,
+  status,
+  ctaLabel = 'Open',
+  color = 'blue',
+  disabled = false,
+}: ToolCardProps) {
   return (
-    <div className="bg-surface-muted border border-surface-border rounded-token-lg p-token-4">
+    <div
+      className={clsx(
+        'border border-surface-border rounded-token-lg p-token-4 transition-colors',
+        // Real value is opacity-50 here (ModuleLauncherCard.tsx:69), not the
+        // opacity.disabled token (40%) - that token was scoped from bg-brand
+        // button evidence specifically, a different disabled convention
+        // than this large surface card uses.
+        disabled
+          ? 'bg-surface-muted opacity-50 cursor-not-allowed'
+          : clsx('bg-surface-muted hover:bg-surface-default cursor-pointer', HOVER_BORDER[color]),
+      )}
+    >
       <div
         className={clsx(
           'w-10 h-10 rounded-token-md border flex items-center justify-center mb-token-3',
