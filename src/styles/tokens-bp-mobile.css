@@ -20,6 +20,8 @@
   --color-scrim-subtle: rgba(0, 0, 0, 0.4);
   --color-scrim-default: rgba(0, 0, 0, 0.7);
   --color-scrim-strong: rgba(0, 0, 0, 0.9);
+  --color-hero-overlay-horizontal: linear-gradient(to right, #2a1530 0%, rgba(42, 21, 48, 0.85) 50%, transparent 100%);
+  --color-hero-overlay-vertical: linear-gradient(to top, rgba(42, 21, 48, 0.7) 0%, transparent 100%);
   --color-accent-blue-tint-bg: rgba(43, 127, 255, 0.1);
   --color-accent-blue-tint-border: rgba(43, 127, 255, 0.2);
   --color-accent-blue-hover-border: rgba(43, 127, 255, 0.4);
@@ -60,6 +62,7 @@
   --radius-sm: 6px;
   --radius-md: 8px;
   --radius-lg: 12px;
+  --radius-2xl: 16px;
   --radius-xl: 24px;
   --radius-full: 9999px;
   --font-family-sans: Outfit, sans-serif;

@@ -223,6 +223,22 @@ export default function Home() {
 
         <Card className="space-y-token-2">
           <p className="text-label uppercase tracking-wide text-text-secondary">
+            Featured Product hero — overlay + title gradients (theme-independent overlay)
+          </p>
+          <div className="relative w-full h-40 rounded-token-2xl overflow-hidden bg-[#3a2a45]">
+            <div className="absolute inset-0 bg-hero-overlay-h" />
+            <div className="absolute inset-0 bg-hero-overlay-v" />
+            <div className="relative z-10 p-token-6">
+              <h2 className="text-token-2xl font-token-black text-white">
+                Scriptoplay{' '}
+                <span className="text-transparent bg-clip-text bg-text-gradient">IP Studio</span>
+              </h2>
+            </div>
+          </div>
+        </Card>
+
+        <Card className="space-y-token-2">
+          <p className="text-label uppercase tracking-wide text-text-secondary">
             Text scale (primary / soft / secondary / subtle)
           </p>
           <p className="text-body text-text-primary">Primary — the default reading color.</p>

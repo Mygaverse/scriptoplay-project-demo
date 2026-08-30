@@ -19,6 +19,10 @@ export const colorPhaseFinalDraft = "#34d399";
 export const colorScrimSubtle = "rgba(0, 0, 0, 0.4)";
 export const colorScrimDefault = "rgba(0, 0, 0, 0.7)";
 export const colorScrimStrong = "rgba(0, 0, 0, 0.9)";
+export const colorHeroOverlayHorizontal =
+  "linear-gradient(to right, #2a1530 0%, rgba(42, 21, 48, 0.85) 50%, transparent 100%)";
+export const colorHeroOverlayVertical =
+  "linear-gradient(to top, rgba(42, 21, 48, 0.7) 0%, transparent 100%)";
 export const colorAccentBlueTintBg = "rgba(43, 127, 255, 0.1)";
 export const colorAccentBlueTintBorder = "rgba(43, 127, 255, 0.2)";
 export const colorAccentBlueHoverBorder = "rgba(43, 127, 255, 0.4)";
@@ -116,6 +120,7 @@ export const space25 = "10px";
 export const radiusSm = "6px";
 export const radiusMd = "8px";
 export const radiusLg = "12px";
+export const radius2xl = "16px";
 export const radiusXl = "24px";
 export const radiusFull = "9999px";
 export const fontFamilySans = "Outfit, sans-serif";
@@ -155,6 +160,8 @@ export const textSoft = "#3f3f46";
 export const textSecondary = "#52525b";
 export const textSubtle = "#71717a";
 export const textInverse = "#18181b";
+export const textGradient =
+  "linear-gradient(to right, #bc2566 0%, #ffb86a 100%)";
 export const surfaceDefault = "#ffffff";
 export const surfaceMuted = "#f2f3f5";
 export const surfaceBorder = "#dcdce1";
@@ -369,3 +376,10 @@ export const featureCardRoseIconHoverBg = "#ff2056";
 export const featureCardPinkIconBg = "rgba(246, 51, 154, 0.1)";
 export const featureCardPinkIconFg = "#e60076";
 export const featureCardPinkIconHoverBg = "#f6339a";
+export const featuredHeroRadius = "16px";
+export const featuredHeroOverlayHorizontal =
+  "linear-gradient(to right, #2a1530 0%, rgba(42, 21, 48, 0.85) 50%, transparent 100%)";
+export const featuredHeroOverlayVertical =
+  "linear-gradient(to top, rgba(42, 21, 48, 0.7) 0%, transparent 100%)";
+export const featuredHeroTitleGradient =
+  "linear-gradient(to right, #bc2566 0%, #ffb86a 100%)";

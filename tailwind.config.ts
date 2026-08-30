@@ -188,6 +188,11 @@ const config: Config = {
         'token-sm': 'var(--radius-sm)',
         'token-md': 'var(--radius-md)',
         'token-lg': 'var(--radius-lg)',
+        // 16px / rounded-2xl - the Featured Product hero banner container
+        // (CartoonStudioBanner.tsx:20). Named to match Tailwind's own
+        // 2xl/3xl split even though it sits BETWEEN our lg and xl below -
+        // 'xl' here was named first (24px) before this 16px step was found.
+        'token-2xl': 'var(--radius-2xl)',
         // 24px / rounded-3xl - the Dashboard-home launcher tiles
         // (app/dashboard/page.tsx:147 etc.), bigger than anything else here.
         'token-xl': 'var(--radius-xl)',
@@ -249,6 +254,17 @@ const config: Config = {
         // to-raised) - a surface gradient, not a brand one, so it lives on
         // its own token rather than reusing button-gradient.
         'surface-gradient': 'var(--surface-gradient)',
+        // Real evidence (CartoonStudioBanner.tsx:45-46, the Dashboard-home
+        // "Featured Product" hero): two stacked overlay gradients over a
+        // background image/video, explicitly documented in source as
+        // theme-INDEPENDENT (a deliberate exception to the light/dark
+        // contract), so these read straight off global, not a theme set.
+        'hero-overlay-h': 'var(--featured-hero-overlay-horizontal)',
+        'hero-overlay-v': 'var(--featured-hero-overlay-vertical)',
+        // CartoonStudioBanner.tsx:65 - the "IP Studio" title text, from
+        // brand-text (theme-dependent) to orange-300 (theme-neutral, no
+        // dark: override in the real class).
+        'text-gradient': 'var(--text-gradient)',
       },
     },
   },
