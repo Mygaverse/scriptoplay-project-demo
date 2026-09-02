@@ -112,6 +112,7 @@ export const space3 = "12px";
 export const space4 = "16px";
 export const space5 = "20px";
 export const space6 = "24px";
+export const space7 = "28px";
 export const space8 = "32px";
 export const space10 = "40px";
 export const space12 = "48px";
