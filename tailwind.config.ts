@@ -180,6 +180,7 @@ const config: Config = {
         'token-4': 'var(--space-4)',
         'token-5': 'var(--space-5)',
         'token-6': 'var(--space-6)',
+        'token-7': 'var(--space-7)',
         'token-8': 'var(--space-8)',
         'token-10': 'var(--space-10)',
         'token-12': 'var(--space-12)',
